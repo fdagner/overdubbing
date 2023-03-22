@@ -1,0 +1,71 @@
+.listview {
+    width: 95%;
+    max-width: 1200px;
+    min-width: 800px;
+    margin:0 auto;
+    background-color:#fff;
+    margin-bottom: 10px;
+    }
+    
+    .singleview {
+    margin: 0 auto;
+    max-width: 95%;
+    width: 900px;
+    }
+    
+    .buttonmenu {
+    margin-bottom: 25px;
+    }
+    
+    .editbuttons {
+    margin-top: 45px;
+    }
+    
+    .newentries {
+    margin: 0 auto;
+    width: 95%;
+    max-width:900px;
+    }
+    
+    video {
+    max-width: 95%;
+    }
+    
+    h3 {
+    margin-top: 20px;
+    }
+    
+    .flexbuttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+    
+    .flexbutton {
+    min-width: 160px;
+    margin: 5px;
+    }
+    
+    #recordButton:disabled {
+      border: solid 2px #ca3120;
+    animation: glowing 1300ms infinite;
+    }
+    
+     @keyframes glowing {
+            0% {
+              background-color: #ca3120;
+              box-shadow: 0 0 0px #ca3120;
+             color: #fff;
+            }
+            50% {
+              background-color: #fff;
+              box-shadow: 0 0 0 0px #fff;
+             color: #ca3120;
+            }
+            100% {
+              background-color: #ca3120;
+              box-shadow: 0 0 0px #ca3120;
+            color: #fff;
+            }
+          }

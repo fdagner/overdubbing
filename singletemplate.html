@@ -1,0 +1,70 @@
+<div class="singleview">
+  <div>
+    <!-- Hier den Link zum Video anpassen -->
+    <video
+      id="videoPlayer"
+      src="https://lernplattform.mebis.bayern.de/pluginfile.php/64600736/mod_resource/content/0/caminandes-llama-drama.mp4"
+      controls
+      muted
+    ></video>
+    <!-- Hier den Link zum Video anpassen -->
+  </div>
+  <div class="buttonmenu">
+    <input
+      type="button"
+      class="btn btn-secondary"
+      id="startButton"
+      value="Start"
+    />
+    <input
+      type="button"
+      class="btn btn-secondary"
+      id="pauseButton"
+      value="Pause"
+    />
+    <input
+      type="button"
+      class="btn btn-secondary"
+      id="stopButton"
+      value="Stop"
+    />
+  </div>
+  <h5>Audiodatei</h5>
+  <hr />
+  <div style="display: none">[[Datei]]</div>
+  <audio id="audioplayer" controls></audio>
+  <script>
+    // Select audio element and link.
+    var audioPlayer = document.getElementById("audioplayer");
+    var linkElement = document.querySelector("a[href$='.wav']");
+    // Extract the file link from the link.
+    var fileUrl = linkElement.href;
+    // Set up an audio element with a file link as a source.
+    audioPlayer.src = fileUrl;
+  </script>
+  <script>
+    // Control elements for audio and video.
+    var videoPlayer = document.getElementById("videoPlayer");
+    var startButton = document.getElementById("startButton");
+    var pauseButton = document.getElementById("pauseButton");
+    var stopButton = document.getElementById("stopButton");
+
+    startButton.addEventListener("click", () => {
+      videoPlayer.play();
+      audioPlayer.play();
+    });
+
+    pauseButton.addEventListener("click", () => {
+      videoPlayer.pause();
+      audioPlayer.pause();
+    });
+
+    stopButton.addEventListener("click", () => {
+      videoPlayer.pause();
+      audioPlayer.pause();
+      videoPlayer.currentTime = 0;
+      audioPlayer.currentTime = 0;
+    });
+  </script>
+  <div class="editbuttons">##edit## ##delete##</div>
+</div>
