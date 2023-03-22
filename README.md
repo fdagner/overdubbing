@@ -13,6 +13,8 @@ The preset is available in German, but there is not so much to translate. The te
 
 Download the source code and zip the files WITHOUT parent folder or download the ZIP file. Create a "Database" activity in Moodle and then upload the ZIP file as a preset.
 
+To embed another video, the video link must be adjusted in singletemplate and addtemplate.
+
 ## Screenshots
 
 <img width="400" alt="single view" src="/screenshots/einzelansicht.png">
