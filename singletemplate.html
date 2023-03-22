@@ -1,11 +1,70 @@
-<div class="ticket"><p class="profil">##userpicture## ##user##</p><hr>
-<div class="dreieins"><div class="dinge">[[3 Dinge]]</div><div class="dingezwei">[[2 Dinge]]</div><div class="frage">[[Eine Frage]]</div></div>
+<div class="singleview">
+  <div>
+    <!-- Hier den Link zum Video anpassen -->
+    <video
+      id="videoPlayer"
+      src="https://lernplattform.mebis.bayern.de/pluginfile.php/64600736/mod_resource/content/0/caminandes-llama-drama.mp4"
+      controls
+      muted
+    ></video>
+    <!-- Hier den Link zum Video anpassen -->
+  </div>
+  <div class="buttonmenu">
+    <input
+      type="button"
+      class="btn btn-secondary"
+      id="startButton"
+      value="Start"
+    />
+    <input
+      type="button"
+      class="btn btn-secondary"
+      id="pauseButton"
+      value="Pause"
+    />
+    <input
+      type="button"
+      class="btn btn-secondary"
+      id="stopButton"
+      value="Stop"
+    />
+  </div>
+  <h5>Audiodatei</h5>
+  <hr />
+  <div style="display: none">[[Datei]]</div>
+  <audio id="audioplayer" controls></audio>
+  <script>
+    // Select audio element and link.
+    var audioPlayer = document.getElementById("audioplayer");
+    var linkElement = document.querySelector("a[href$='.wav']");
+    // Extract the file link from the link.
+    var fileUrl = linkElement.href;
+    // Set up an audio element with a file link as a source.
+    audioPlayer.src = fileUrl;
+  </script>
+  <script>
+    // Control elements for audio and video.
+    var videoPlayer = document.getElementById("videoPlayer");
+    var startButton = document.getElementById("startButton");
+    var pauseButton = document.getElementById("pauseButton");
+    var stopButton = document.getElementById("stopButton");
 
-<div class="spickzettel">[[Spickzettel]]</div>
+    startButton.addEventListener("click", () => {
+      videoPlayer.play();
+      audioPlayer.play();
+    });
 
-<div class="fachbegriffe">[[Fachbegriffe]]</div>
+    pauseButton.addEventListener("click", () => {
+      videoPlayer.pause();
+      audioPlayer.pause();
+    });
 
-<div class="emojis"><div class="emoji1">[[Emojis2]]</div><div ="emoji2">[[Emojis]]</div></div>
-
-<div class="feedback"><div class="feedbackeins">[[Feedback1]]</div><div class="feedbackzwei">[[Feedback2]]</div><div class="feedbackdrei">[[Feedback3]]</div><div class="feedbackvier">[[Feedback4]]</div><div class="feedbackfuenf">[[Feedback5]]</div></div><hr>
-<p class="edit">##timeadded## ##edit####delete####disapprove####approve##</p></div>
+    stopButton.addEventListener("click", () => {
+      videoPlayer.pause();
+      audioPlayer.pause();
+      videoPlayer.currentTime = 0;
+      audioPlayer.currentTime = 0;
+    });
+  </script>
+  <div class="editbuttons">##edit## ##delete##</div>
+</div>
