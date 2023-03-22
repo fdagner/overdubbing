@@ -1,0 +1,124 @@
+.card-bodyx {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    border-left: dashed 10px #999;
+    box-shadow: 5px 3px 8px 1px #969696;
+    max-width: 900px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.ticket {
+    max-width: 900px;
+    font-size:1.2em;
+    box-shadow: 5px 3px 8px 1px #969696;
+    padding: 15px 4px 1px 15px;    
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: dashed 10px #999999;
+}
+
+.box h3 {
+display:none;
+}
+
+
+.dinge:not(:empty)::before {
+content: "3 Dinge die ich heute gelernt habe";
+color: #45C500;
+padding:2px;
+}
+
+.dingezwei:not(:empty)::before {
+content: "2 Dinge die ich heute interessant fand";
+color:  #45C500;
+padding:2px;
+}
+
+.frage:not(:empty)::before {
+content: "Eine Frage habe ich noch:";
+color: #45C500;
+padding:2px;
+}
+
+.dreieins {
+margin: 0 auto;
+margin-bottom:15px;
+}
+
+.spickzettel:not(:empty)::before {
+content: "Mein Spickzettel";
+color: #848484;
+padding:2px;
+}
+
+.spickzettel {
+margin: 0 auto;
+margin-bottom:15px;
+}
+
+.fachbegriffe:not(:empty)::before {
+content: "Wichtige Begriffe: ";
+color: #ff7b11;
+padding:2px;
+}
+
+.fachbegriffe {
+margin: 0 auto;
+margin-bottom:15px;
+}
+
+.emoji1:not(:empty)::before {
+content: "So habe ich mich heute gefühlt: ";
+color: #c50056;
+padding:2px;
+}
+
+.emojis {
+margin: 0 auto;
+margin-bottom:15px;
+}
+
+.feedbackeins:not(:empty)::before {
+content: "So fand ich den heutigen Unterricht: ";
+color: #0096f6;
+padding:2px;
+}
+
+.feedbackzwei:not(:empty)::before {
+content: "Mein heutiges Arbeitsverhalten: ";
+color: #0096f6;
+padding:2px;
+}
+
+.feedbackdrei:not(:empty)::before {
+content: "So gut habe ich das Thema verstanden: ";
+color: #0096f6;
+padding:2px;
+}
+
+.feedbackvier:not(:empty)::before {
+content: "Das hat mich geärgert: ";
+color: #0096f6;
+padding:2px;
+}
+
+.feedbackfuenf:not(:empty)::before {
+content: "Das hat mich gefreut: ";
+color: #0096f6;
+padding:2px;
+}
+
+.feedback {
+margin: 0 auto;
+margin-bottom:15px;
+}
+
+.edit {
+text-align:right;
+}
+
+.profil {
+font-size:1.2em;
+}
